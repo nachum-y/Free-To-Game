@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { FullGame } from '../../../service/type'
 import AdditionalInfo from './AdditionalInfo'
 import classes from './GameDescription.module.scss'
+import GameScreenshots from './GameScreenshots'
 
 const GameDescription: FC<{ game: FullGame }> = ({ game }) => {
     return (
@@ -21,6 +22,9 @@ const GameDescription: FC<{ game: FullGame }> = ({ game }) => {
                 release_date={game.release_date}
                 genre={game.genre}
                 platform={game.platform}
+            />
+            <GameScreenshots
+                screenshots={game.screenshots}
             />
         </div>
     )

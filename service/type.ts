@@ -37,16 +37,21 @@ export type FullGame = {
     developer: string
     release_date: string
     freetogame_profile_url: string
-    screenshots: {
-        id: string | number
-        image: string
-    }[]
+    screenshots: GameScreenshots
 }
 
+export type GameScreenshots = {
+
+    id: string | number
+    image: string
+
+}[]
+
 export type ContextDefaultValuesGame = {
-    games: null | Game[],
+    gamesToDisplay: null | Game[],
     loadgame: () => void,
     onAppLoad: () => void,
+    loadMoreGames: (games?: Game[]) => void,
 
 
 

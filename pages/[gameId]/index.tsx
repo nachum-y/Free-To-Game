@@ -5,6 +5,7 @@ import { gameService } from '../../service/game-service'
 import { FullGame } from '../../service/type'
 import GameDescription from '../../components/game-details/game-description/GameDescription'
 import Image from 'next/image'
+import GameRate from '../../components/game-details/game-rate/GameRate'
 const GameDetails = () => {
 
     const router = useRouter()
@@ -31,11 +32,8 @@ const GameDetails = () => {
                 <Image src={game.thumbnail} width='100vw' height='500px' style={{ opacity: '0.2' }} />
             </div> */}
             <div className={classes['game-details']}>
-                <div>
-                    t3
-                </div>
+                <GameRate game={game} />
                 <GameDescription game={game} />
-
             </div>
         </>
     )

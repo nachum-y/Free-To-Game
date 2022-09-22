@@ -5,8 +5,7 @@ import classes from './MainHeader.module.scss'
 const MainHeader = () => {
     return (
         <nav className={classes['main-header']}>
-            <Image src='/logo/free-to-game-logo.png' width='165px' height='120px' />
-
+            <Image src='https://www.freetogame.com/assets/images/freetogame-logo.png' width='165px' height='45px' />
         </nav>
     )
 

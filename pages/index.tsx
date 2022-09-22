@@ -8,7 +8,7 @@ import { GameContext } from '../store/game'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-  const { onAppLoad } = useContext(GameContext)
+  const { onAppLoad, loadMoreGames, gamesToDisplay } = useContext(GameContext)
   useEffect(() => {
     onAppLoad()
   }, [])
@@ -23,7 +23,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className={styles.title}> Best Free Games for PC and Browser In {(new Date).getFullYear()}!</h1>
-      <GameList />
+      {gamesToDisplay ? <GameList gamesToDisplay={gamesToDisplay} />
+        : <div>Loading</div>
+      }
+
+      <div className={styles['load-more']}>
+        <button onClick={() => loadMoreGames()}>
+          Load More
+        </button>
+      </div>
     </>
   )
 }
