@@ -1,0 +1,14 @@
+.additional-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    .text-muted {
+        color: #7a8288 ;
+    }
+}

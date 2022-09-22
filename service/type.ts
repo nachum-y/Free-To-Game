@@ -1,6 +1,12 @@
 
 
 
+
+export type Props = {
+    children: React.ReactNode
+}
+
+
 export type Game = {
     id: number | string
     title: string
@@ -15,6 +21,27 @@ export type Game = {
     freetogame_profile_url: string
 }
 
+export type FullGame = {
+
+
+    id: number | string
+    title: string
+    thumbnail: string
+    status: string
+    short_description: string
+    description: string
+    game_url: string
+    genre: string
+    platform: string
+    publisher: string
+    developer: string
+    release_date: string
+    freetogame_profile_url: string
+    screenshots: {
+        id: string | number
+        image: string
+    }[]
+}
 
 export type ContextDefaultValuesGame = {
     games: null | Game[],

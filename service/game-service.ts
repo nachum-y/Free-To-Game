@@ -7,6 +7,7 @@ export const server = dev ? 'http://127.0.0.1:3000' : ''
 
 export const gameService = {
     query,
+    getGameById
 
 }
 
@@ -17,6 +18,10 @@ async function query() {
     const { data } = gameList
     return data
 
+}
 
-
+async function getGameById(gameId: string | number) {
+    const game = await axios.get(`${server}/api/game/${gameId}`)
+    const { data } = game
+    return data
 }

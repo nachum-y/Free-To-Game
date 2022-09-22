@@ -1,0 +1,53 @@
+.game-card {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #32383e;
+    background-clip: border-box;
+    border: 0solidrgba(0, 0, 0, .6);
+    border-radius: 0.25rem;
+    max-width: 260px;
+    cursor: pointer;
+}
+
+.game-card-body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem 0.5rem ;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #aaa;
+        }
+
+        &-free {
+            color: #fff;
+            background-color: #4799eb;
+            font-size: 0.75rem;
+            border-radius: 0.25rem;
+            padding: 0.25rem;
+        }
+    }
+
+    &-badge-genre {
+        margin-left: auto;
+        padding-top: 1px;
+        padding-bottom: 2px;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        width: fit-content;
+        background-color: #7a8288;
+        display: inline-block;
+        padding: 0.25em 0.4em;
+        font-size: 75%;
+        vertical-align: baseline;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    }
+}
